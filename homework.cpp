@@ -7,17 +7,33 @@ void displayList(std::vector<T> const &v);
 
 int main()
 {
-    // You can follow along with any code in class here
+    // Task 1
     std::vector<int> wholeN = {1, 2, 3, 4, 5};
     std::vector<double> decimalN = {3.14, 2.72, 1.23, 4.56, 5.6};
     std::vector<std::string> names = {"Amy", "Christian", "Nathaniel", "Hoangoes", "Kaden"};
 
-    std::cout << "In the int list, the values at index 0, 2, and 4 are: " << wholeN[0] <<", " << wholeN[2] << ", and " << wholeN[4] << std::endl << std::endl;
+    // Task 2
+    std::cout << "In the int list ";
+    displayList(wholeN);
+    std::cout << "the values at index 0, 2, and 4 are: " << wholeN[0] <<", " << wholeN[2] << ", and " << wholeN[4] << std::endl << std::endl;
     
-    std::cout << "The list of strings/names is: " << std::endl;
+    // Task 3
+    std::cout << "The list of strings/names is: ";
     displayList(names);
+    std::cout << "My name is Jonathan. Let's add that to the end of the list." << std::endl;
+    names.push_back("Jonathan");
+    displayList(names);
+    std::cout << std::endl << std::endl;
 
+    // Task 4
+    std::cout << "Here's the list of decimals." << std::endl;
+    displayList(decimalN);
+    std::cout << "Time to erase the last number." << std::endl;
+    decimalN.pop_back();
+    displayList(decimalN);
 
+    // Extra Stuff
+    
     return 0;
 }
 
